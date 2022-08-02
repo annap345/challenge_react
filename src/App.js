@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -117,7 +116,11 @@ function App() {
       <div class="credit">
         <p>
           coded by Anna Popovych <br />
-          <a href="https://github.com/annap345/weather-app" target="_blank">
+          <a
+            href="https://github.com/annap345/weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
             Code on GitHub
           </a>
         </p>
