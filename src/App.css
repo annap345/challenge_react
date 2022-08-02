@@ -1,38 +1,173 @@
-.App {
+body {
+  background: #c0d8c0;
+}
+
+.app {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-style: solid;
+  border-color: #dd4a48;
+  width: 1100px;
+  border-radius: 10px;
+  background-color: #ecb390;
+}
+.heading {
+  font-family: "Tiro Devanagari Sanskrit", serif;
   text-align: center;
+  text-decoration: underline;
+  color: #dd4a48;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: block;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  padding-left: 430px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.date {
+  text-align: center;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-size: 25px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  color: #dd4a48;
+  border-style: solid;
+  border-color: #dd4a48;
+  border-width: 2px;
+  border-radius: 10px;
+  width: 220px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  background-color: #f5eedc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main,
+.forecast,
+.city {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  color: #dd4a48;
+  background-color: #f5eedc;
 }
 
-.App-link {
-  color: #61dafb;
+.more {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  padding-left: 450px;
+  margin: 30px;
+  color: #dd4a48;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forecast {
+  padding: 20px 200px;
+  margin-left: 150px;
+  margin-right: 150px;
+  color: #dd4a48;
+  border-style: solid;
+  border-color: #dd4a48;
+  border-width: 2px;
+  border-radius: 20px;
+}
+
+.submit {
+  padding: 5px;
+  background-color: #f5eedc;
+  color: #dd4a48;
+  border-color: #dd4a48;
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+  border-width: 2px;
+}
+
+.submit:hover {
+  background-color: #dd4a48;
+  color: #f5eedc;
+}
+
+.sun {
+  color: #ffd102;
+  font-size: 30px;
+}
+
+.rain {
+  color: #153f73;
+  font-size: 30px;
+}
+
+.cloud {
+  color: #939de4;
+  font-size: 30px;
+}
+
+.degree {
+  color: #dd4a48;
+}
+
+.weather,
+.wind {
+  color: #dd4a48;
+  text-decoration: underline;
+}
+
+.small-degree {
+  color: #dd4a48;
+}
+
+.day {
+  text-decoration: underline;
+}
+
+.city,
+.main {
+  border-radius: 20px;
+  border-color: #dd4a48;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.main {
+  padding-bottom: 10px;
+}
+
+.city {
+  padding-right: 10px;
+  width: fit-content;
+}
+
+.col-1 {
+  width: 350px;
+}
+
+.input-search {
+  margin: 0 auto;
+}
+
+.credit {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  margin-top: 10px;
+  text-align: center;
+  color: #dd4a48;
+}
+
+a {
+  text-decoration: none;
+}
+
+#search-input {
+  width: 215px;
+}
+
+#celcius,
+#fahrenheit {
+  cursor: pointer;
+}
+
+#celcius:hover,
+#fahrenheit:hover {
+  text-decoration: underline;
+  color: #153f73;
 }
