@@ -3,6 +3,8 @@ import "./Weather.css";
 import "bootstrap";
 import axios from "axios";
 import Dates from "./Dates";
+import Icon from "./Icon";
+import Celcius from "./Celcius"
 
 export default function Weather() {
   let [ready, setReady] = useState(false);
@@ -24,6 +26,7 @@ export default function Weather() {
       weath: response.data.weather[0].description,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
+      weathIc:response.data.weather[0].main
     });
     setReady(true);
   }
@@ -63,13 +66,13 @@ export default function Weather() {
               <div className="col-1 city">
                 <h2 id="main-city">{city}</h2>
                 <div id="main-weather">
-                  <i className="fa-solid fa-sun sun"></i>
+                  <Icon image={dataw.weathIc}/>
                 </div>
               </div>
               <div className="col-1 main">
                 <h2 className="degree">
-                  <span id="main-degree">{Math.round(dataw.temp)}</span>
-                  <span id="celcius">°C </span> /<span id="fahrenheit">°F</span>
+                  
+                  <Celcius temp={dataw.temp}/>
                 </h2>
                 <p className="small-degree" id="small-degrees">
                   <span id="degree-max">{Math.round(dataw.max)}</span>°C ~{" "}
