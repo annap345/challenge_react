@@ -70,14 +70,7 @@ export default function Weather() {
                 </div>
               </div>
               <div className="col-1 main">
-                <h2 className="degree">
-                  
-                  <Celcius temp={dataw.temp}/>
-                </h2>
-                <p className="small-degree" id="small-degrees">
-                  <span id="degree-max">{Math.round(dataw.max)}</span>°C ~{" "}
-                  <span id="degree-min">{Math.round(dataw.min)}</span>°C
-                </p>
+                  <Celcius temp={dataw.temp} tempMin={dataw.min} tempMax={dataw.max}/>
               </div>
             </div>
           </div>
