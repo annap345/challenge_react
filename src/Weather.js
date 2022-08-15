@@ -5,6 +5,7 @@ import axios from "axios";
 import Dates from "./Dates";
 import Icon from "./Icon";
 import Celcius from "./Celcius"
+import Forecast from "./Forecast";
 
 export default function Weather() {
   let [ready, setReady] = useState(false);
@@ -83,76 +84,7 @@ export default function Weather() {
               wind: {Math.round(dataw.wind)} km/h
             </p>
           </div>
-          <div className="forecast">
-            <div className="row align-items-center">
-              <div className="col">
-                <h3 className="day" id="day-one">
-                  W
-                </h3>
-                <div>
-                  <p className="degree" id="first-day">
-                    19°
-                  </p>
-                </div>
-                <span id="weather-one">
-                  <i className="fa-solid fa-sun sun"></i>
-                </span>
-              </div>
-              <div className="col">
-                <h3 className="day" id="day-two">
-                  Th
-                </h3>
-                <div>
-                  <p className="degree" id="second-day">
-                    14°
-                  </p>
-                </div>
-                <span id="weather-two">
-                  <i className="fa-solid fa-cloud-sun cloud"></i>
-                </span>
-              </div>
-              <div className="col">
-                <h3 className="day" id="day-three">
-                  F
-                </h3>
-                <div>
-                  <p className="degree" id="third-day">
-                    17°
-                  </p>
-                </div>
-                <span id="weather-three">
-                  <i className="fa-solid fa-cloud-rain rain"></i>
-                </span>
-              </div>
-              <div className="col">
-                <h3 className="day" id="day-four">
-                  St
-                </h3>
-                <div>
-                  <p className="degree" id="fourth-day">
-                    23°
-                  </p>
-                </div>
-                <span id="weather-four">
-                  <i className="fa-solid fa-cloud-rain rain"></i>
-                </span>
-              </div>
-              <div className="col">
-                <h3 className="day" id="day-five">
-                  S
-                </h3>
-                <div>
-                  <p className="degree" id="fifth-day">
-                    18°
-                  </p>
-                </div>
-                <span id="weather-five">
-                  <i className="fa-solid fa-cloud-sun cloud"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+          <Forecast cityNow={city} dates={dataw.date}/>
         <div className="credit">
           <p>
             coded by Anna Popovych <br />
@@ -166,6 +98,7 @@ export default function Weather() {
           </p>
         </div>
         <script src="src/script.js"></script>
+      </div>
       </div>
     );
   } else {
