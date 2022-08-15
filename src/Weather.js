@@ -52,7 +52,8 @@ export default function Weather() {
                   type="text"
                   placeholder="Enter a city"
                   id="search-input"
-                  onBlur={nowCity}
+                  autoFocus="on"
+                onChange={nowCity}
                 />
                 <input type="submit" value="search" className="submit" />
               </form>
