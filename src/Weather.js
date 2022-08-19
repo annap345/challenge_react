@@ -89,7 +89,7 @@ export default function Weather() {
           <p>
             coded by Anna Popovych <br />
             <a
-              href="https://github.com/annap345/weather-app"
+              href="https://github.com/annap345/challenge_react"
               target="_blank"
               rel="noreferrer"
             >
