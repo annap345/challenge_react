@@ -27,7 +27,8 @@ export default function Weather() {
       weath: response.data.weather[0].description,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
-      weathIc:response.data.weather[0].main
+      weathIc:response.data.weather[0].main,
+      coordinates: response.data.coord
     });
     setReady(true);
   }
@@ -84,7 +85,7 @@ export default function Weather() {
               wind: {Math.round(dataw.wind)} km/h
             </p>
           </div>
-          <Forecast cityNow={city} dates={dataw.date}/>
+          <Forecast coordin={dataw.coordinates} />
         <div className="credit">
           <p>
             coded by Anna Popovych <br />

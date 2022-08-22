@@ -44,5 +44,26 @@ if (props.image === "Rain") {
     size={cloudy.size}
     animate={cloudy.animate}
   />
+} else if (props.switch === "Rain") {
+  return <ReactAnimatedWeather
+  icon={rainy.icon}
+  color={rainy.color}
+  size={rainy.size}
+  animate={rainy.animate}
+/>
+} else if (props.switch === "Clear") {
+  return <ReactAnimatedWeather
+  icon={sunny.icon}
+  color={sunny.color}
+  size={sunny.size}
+  animate={sunny.animate}
+/>
+} else if (props.switch === "Clouds") {
+  return <ReactAnimatedWeather
+  icon={cloudy.icon}
+  color={cloudy.color}
+  size={cloudy.size}
+  animate={cloudy.animate}
+/>
 }
 }

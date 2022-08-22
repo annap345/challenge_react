@@ -15,7 +15,7 @@ function cel(event){
 
 if (def === "C") {
     return (<div>
-        <h2 className="degree"><span id="main-degree">{Math.round(props.temp)} </span>°C /<a id="fahrenheit" href="/" onClick={fahr}>°F</a></h2>
+        <h2 className="degree"><span id="main-degree">{Math.round(props.temp)} </span><span id="celcius">°C </span>/<a id="fahrenheit" href="/" onClick={fahr}>°F</a></h2>
     <p className="small-degree" id="small-degrees"><span id="degree-max">{Math.round(props.tempMax)}</span>°C ~ <span id="degree-min">{Math.round(props.tempMin)}</span>°C</p>
     </div>
     )
@@ -24,7 +24,7 @@ if (def === "C") {
     let setFahrMax = Math.round(props.tempMax * 9/5)+32;
     let setFahrMin = Math.round(props.tempMin * 9/5)+32;
     return (<div>
-        <h2 className="degree"><span id="main-degree">{setFahr} </span><a href="/" onClick={cel}>°C </a>/°F</h2>
+        <h2 className="degree"><span id="main-degree">{setFahr} </span><a href="/" onClick={cel} id="celcius">°C </a>/°F</h2>
     <p className="small-degree" id="small-degrees"><span id="degree-max">{Math.round(setFahrMax)}</span>°F ~ <span id="degree-min">{setFahrMin}</span>°F</p>
     </div>
     )
